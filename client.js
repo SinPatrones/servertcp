@@ -1,7 +1,7 @@
 var net = require('net');
 
-//var HOST = '134.122.27.72';
-var HOST = '127.0.0.1';
+var HOST = '134.122.27.72';
+//var HOST = '127.0.0.1';
 var PORT = 6969;
 
 var client = new net.Socket();
@@ -23,4 +23,9 @@ client.on('data', function(data) {
 // Add a 'close' event handler for the client socket
 client.on('close', function() {
     console.log('Connection closed');
+});
+
+client.on('error', ex => {
+    console.log("Error en conectar al servidor");
+    console.log(ex);
 });
