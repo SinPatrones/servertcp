@@ -14,7 +14,7 @@ net.createServer(function(sock) {
     sock.on('data', function(data) {
         console.log('SERVER) DATA ' + sock.remoteAddress + ': ' + data);
         // Write the data back to the socket, the client will receive it as data from the server
-        sock.write('You said "' + data + '"');
+        sock.write('ME dijiste lo siguiente--> "' + data + '"');
     });
     // Add a 'close' event handler to this instance of socket
     sock.on('close', function(data) {
