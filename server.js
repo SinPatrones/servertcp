@@ -25,10 +25,10 @@ app.set('trust proxy', true);
 app.use('/', require('./routes/index.router'));
 
 // servidor TCP
-let net = require('net');
+const net = require('net');
 
 const HOST = '127.0.0.1';
-const PORT = 6969;
+const PORT = 3001;
 
 // Create a server instance, and chain the listen function to it
 // The function passed to net.createServer() becomes the event handler for the 'connection' event

@@ -1,8 +1,8 @@
-var net = require('net');
+﻿var net = require('net');
 
-var HOST = '134.122.27.72';
-//var HOST = '127.0.0.1';
-var PORT = 6969;
+//const HOST = '134.122.27.72';
+const HOST = '127.0.0.1';
+const PORT = 3001
 
 var client = new net.Socket();
 client.connect(PORT, HOST, function() {
